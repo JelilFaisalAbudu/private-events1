@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :require_user, only: [:new, :create]
   def new
     @event = current_user.created_events.build
   end
@@ -19,6 +20,20 @@ class EventsController < ApplicationController
     else
       flash[:alert] = 'Something went wrong. Check and try again'
       render :new
+    end
+  end
+
+  def attend_event
+    redirect_to login_path if session[:user_id].nil?
+    @event = Event.find(params[:id])
+    registration = @event.attendances.build
+    registration.attendee_id = current_user.id
+    if registration.save
+      flash[:notice] = 'Thanks you for registering to attend this event'
+      redirect_to event_path(@event)
+    else
+      flash.now[:alert] = 'Your registration for the event was unsuccessful. Plese try again'
+      redirect_to root_path
     end
   end
 
