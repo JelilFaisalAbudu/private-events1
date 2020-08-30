@@ -1,0 +1,4 @@
+<h1><%= current_user.username %></h1>
+<% current_user.created_events.each do | event | %>
+	<%= event.title %>
+<% end %>
