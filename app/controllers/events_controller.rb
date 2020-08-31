@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :require_user, only: [:new, :create, :attend_event]
-  before_action :set_event, only: [:attend_event, :show]
+  before_action :require_user, only: %i[new create attend_event]
+  before_action :set_event, only: %i[attend_event show]
   def new
     @event = current_user.created_events.build
   end
@@ -9,14 +9,13 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @event = current_user.created_events.build(event_params)
     if @event.save
       flash[:notice] = 'Event successfully created'
-      
+
     else
       flash[:alert] = 'Something went wrong. Check and try again'
       render :new
@@ -36,7 +35,6 @@ class EventsController < ApplicationController
       flash[:notice] = 'Event added successfully to your events list. Don\'t forget to attend.'
       redirect_to root_path
     end
-
   end
 
   def unattend_event
