@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :require_user, only: %i[new create attend_event]
+  before_action :require_user, only: %i[new create attended_event]
   before_action :set_event, only: %i[attend_event show]
   def new
     @event = current_user.created_events.build
@@ -25,9 +25,6 @@ class EventsController < ApplicationController
 
   def attended_event
     event = Event.find(params[:idz])
-    # if @current_user.attended_events.include?(event)
-    #   flash[:danger] = 'This event is already in your events list! Please try next one.'
-    # else
     if event.date < Date.today
       flash[:alert] = 'This event has already ended. Please try next one.'
       redirect_to event_path(event)
@@ -41,7 +38,7 @@ class EventsController < ApplicationController
   def unattend_event
     event = Event.find(params[:idz])
     current_user.attended_events.delete(event)
-    flash[:info] = 'Event successfully removed from your events list.'
+    flash.now[:info] = 'Event successfully removed from your events list.'
     redirect_to root_path
   end
 
