@@ -1,9 +1,9 @@
 module EventsHelper
   def session_check
     if logged_in?
-      render 'shared/logged_in'
+      render 'partials/logged_in'
     else
-      render 'shared/not_logged_in'
+      render 'partials/not_logged_in'
     end
   end
 
