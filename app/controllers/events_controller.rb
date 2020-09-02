@@ -23,7 +23,7 @@ class EventsController < ApplicationController
     end
   end
 
-  def attended_event
+  def attend_event
     event = Event.find(params[:idz])
     if event.date < Date.today
       flash[:alert] = 'This event has already ended. Please try next one.'

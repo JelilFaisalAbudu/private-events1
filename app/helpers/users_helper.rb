@@ -3,7 +3,7 @@ module UsersHelper
     if current_user.created_events.count.zero?
 			content_tag(:h2, 'You have not organized any event yet', class: "text-center")
     else
-      render 'shared/user_events'
+      render 'partials/user_events'
     end
   end
 end
