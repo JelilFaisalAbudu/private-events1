@@ -4,9 +4,9 @@ RSpec.describe Event, type: :model do
   event = user.created_events.create!(
     title: 'My Event Title',
     date: Date.new(2020, 10, 23),
-    description: 'Event desc',
+    description: 'Event desc'
   )
-  
+
   context 'Event creation and validation' do
     it 'should return true (Event fulfil all the requirements)' do
       expect(event).to be_valid
