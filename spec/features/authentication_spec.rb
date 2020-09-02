@@ -1,4 +1,4 @@
-# spec/features/visitor_signs_up_spec.rb
+# spec/features/authentication_spec.rb
 require 'rails_helper'
 
 RSpec.feature 'Visitor signs up', type: :feature do
@@ -22,7 +22,7 @@ RSpec.feature 'Visitor signs up', type: :feature do
 
   scenario 'with valid email and successful login' do
     login_with 'valid@example.com'
-    expect(page).to_not  have_text('Sign up now!')
+    expect(page).to_not have_text('Sign up now!')
   end
 
   def sign_up_with(username, email)
@@ -37,5 +37,4 @@ RSpec.feature 'Visitor signs up', type: :feature do
     fill_in 'email', with: email
     click_button 'Sign In'
   end
-  
 end
