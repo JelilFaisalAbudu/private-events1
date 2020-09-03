@@ -4,7 +4,7 @@ Rails.application.routes.draw do
  
   get 'events/new'
   get 'events/show'
-  post 'add_events_attending', to: 'events#attend_event'
+  post 'add_events_attending', to: 'events#attended_event'
   post 'rem_events_attending', to: 'events#unattend_event'
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
