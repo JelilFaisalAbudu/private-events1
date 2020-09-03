@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       log_in(user)
       redirect_to root_path
     else
-      flash.now[:danger] = 'Invalid email/password. Try again' # Log in not
+      flash.now[:alert] = 'Invalid email. Try again' # Log in not
       render 'new' # Try once more
     end
   end
