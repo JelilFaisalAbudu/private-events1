@@ -7,7 +7,7 @@
 <div align="center">
     
 [![languages](https://img.shields.io/github/languages/count/JelilFaisalAbudu/private-events1?style=plastic)]
-[![Last commit](https://img.shields.io/github/last-commit/JelilFaisalAbudu/private-events1)](https://github.com/JelilFaisalAbudu/private-events1/commits/master)
+[![Last commit](https://img.shields.io/github/last-commit/JelilFaisalAbudu/private-events1)](https://github.com/JelilFaisalAbudu/private-events1/commits/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![issues](https://img.shields.io/github/issues/JelilFaisalAbudu/private-events1)](https://github.com/JelilFAisalAbudu/private-events1/issues)
 [![Made By](https://img.shields.io/badge/Made%20By-Jelil%20Abudu-brightgreen)](https://github.com/JelilFaisalAbudu)
