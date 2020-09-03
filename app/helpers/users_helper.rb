@@ -6,5 +6,4 @@ module UsersHelper
       render 'partials/user_events'
     end
   end
-
 end
