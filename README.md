@@ -77,7 +77,7 @@ Then access in your favorite browser the indicated port number (By default rails
 👤 **Jelil Faisal Abudu**
 
 - Github: [JelilFaisalAbudu](https://github.com/JelilFaisalAbudu/)
-- Twitter: [@jelilavudu](https://twitter.com/jelilabudu)
+- Twitter: [@jelilabudu](https://twitter.com/jelilabudu)
 - Linkedin: [jelilfaisalabudu](linkedin.com/in/jelilfaisalabudu)
 
 ## 🤝 Contributing
