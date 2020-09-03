@@ -6,19 +6,16 @@
       <h2>
         Welcome to our happy home, where all the interesting events are organized by friends for friends across the world to attend.
       </h2>
-      <% unless logged_in? %>
-        <p>
-        	<%= link_to "Sign up now!", signup_path, class: "btn  btn-primary my-2" %>
-      	</p>
-      <% end %> 
+      <%= signup_cta  %> 
     </div>
 </section>
 
 
 <div class="album py-5 bg-light">
   <div class="container">
-    <div class="row">
-      <% @events.each do |event| %>
+    <h2 class="text-center py-4">Upcomming Events</h2>
+    <div class="row justify-content-center">
+      <% @upcoming_events.each do |event| %>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
@@ -39,13 +36,7 @@
                   </button>
                   
                     <button type="button" class="btn btn-sm btn-outline-secondary">
-                      <% if !event.attendees.include?(current_user) && event.date >= Date.today %>
-                        <%= link_to 'Attend Event', add_events_attending_path(event, idz: event.id), method: :post, class:'' %>
-                      <% elsif event.attendees.include?(current_user) %>
-                        <%= link_to 'Unattend Event', rem_events_attending_path(event, idz: event.id), method: :post, class:'' %>
-                      <% else %>
-                        <%= link_to 'Passed', '#', class: 'text-danger' %>
-                      <% end %>
+                      <%= event_state(event) %>
                   </button>
                 
                 </div>
@@ -58,9 +49,42 @@
   </div>
 </div>
 
-<h3>All Events</h3>
-<% @events.each do | event | %>
-	<%= event.title %>
-<% end %>
+<div class="album py-5 bg-light ">
+  <h2 class="text-center py-4">Previous Events</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      <% @previous_events.each do |event| %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title><%= event.title %></title>
+              <rect width="100%" height="100%" fill="#55595c"/>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+              <%= event.title %>
+              </text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">
+                <%= event.description %>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary ">
+                  <%= link_to 'View Details', event_path(event), class: '' %>
+                  </button>
+                  
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <%= event_state(event) %>
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
   
 
