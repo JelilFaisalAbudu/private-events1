@@ -1,15 +1,19 @@
 class EventsController < ApplicationController
   before_action :require_user, only: %i[new create attended_event]
-  before_action :set_event, only: %i[attend_event show]
+
   def new
     @event = current_user.created_events.build
   end
 
   def index
     @events = Event.all
+    @previous_events = @events.previous_events
+    @upcoming_events = @events.upcoming_events
   end
 
-  def show; end
+  def show
+    @event = Event.find(params[:id])
+  end
 
   def create
     @event = current_user.created_events.build(event_params)
@@ -23,22 +27,21 @@ class EventsController < ApplicationController
     end
   end
 
-  def attend_event
+  def attended_event
     event = Event.find(params[:idz])
     if event.date < Date.today
       flash[:alert] = 'This event has already ended. Please try next one.'
-      redirect_to event_path(event)
     else
       current_user.attended_events << event
       flash[:notice] = 'Event added successfully to your events list. Don\'t forget to attend.'
-      redirect_to root_path
+      redirect_to event_path(event)
     end
   end
 
   def unattend_event
     event = Event.find(params[:idz])
     current_user.attended_events.delete(event)
-    flash.now[:info] = 'Event successfully removed from your events list.'
+    flash[:info] = 'Event successfully removed from your events list.'
     redirect_to root_path
   end
 
