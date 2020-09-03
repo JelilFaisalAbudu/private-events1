@@ -1,25 +1,31 @@
-# ->Private Events<-
+<h3 align="center">Private Events</h3>
 
-## ->🛸 Stay hungry, stay foolish<-
+<h4 align="center">
+  🛸 Stay hungry, stay foolish
+</h4>
 
-->
+<div align="center">
+    
 [![languages](https://img.shields.io/github/languages/count/JelilFaisalAbudu/private-events1?style=plastic)]
 [![Last commit](https://img.shields.io/github/last-commit/JelilFaisalAbudu/private-events1)](https://github.com/JelilFaisalAbudu/private-events1/commits/master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![issues](https://img.shields.io/github/issues/JelilFaisalAbudu/private-events1)](https://github.com/JelilFAisalAbudu/private-events1/issues)
 [![Made By](https://img.shields.io/badge/Made%20By-Jelil%20Abudu-brightgreen)](https://github.com/JelilFaisalAbudu)
-[![Twitter Follow](https://img.shields.io/twitter/follow/kevinnnmn?label=Follow%20Kevin%20on%20Twitter&style=social)](https://twitter.com/jelilabudu)
-<-
+[![Twitter Follow](https://img.shields.io/twitter/follow/jelilabudu?label=Follow%20Jelil%20on%20Twitter&style=social)](https://twitter.com/jelilabudu)
+</div>
 
-->
+<p align="center">
 <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#installing">Installing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#built_using">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
-<-
+</p>
 
-  ->![Project Screenshot]() src="app/assets/images/PrivateEvents1.png" width="100%"<-
-
+<p align="center">
+  <a href="" rel="noopener">
+  <img alt="Project Screenshot" src="app/assets/images/PrivateEvents1.png" width="100%">
+  </a>
+</p>
 
 ## 🧐 About <a name = "about"></a>
 <h3 align="center">This is a Private Events project, which users can log in, create and attend to events. The goal here is to learn how associations works and how to implement many-to-many; belonging and so on. Hope you guys enjoy it.
