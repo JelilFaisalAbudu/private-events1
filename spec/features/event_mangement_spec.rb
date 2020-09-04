@@ -20,6 +20,7 @@ RSpec.feature 'Event creation and management', type: :feature do
     fill_in 'title',	with: 'My Event Title'
     fill_in 'date',	with: Date.new(2020, 10, 10)
     fill_in 'description',	with: 'My event description'
+
     click_on 'Submit'
     expect(page).to have_content('Event successfully created')
   end
