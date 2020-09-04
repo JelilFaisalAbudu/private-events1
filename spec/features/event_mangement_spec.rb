@@ -18,7 +18,6 @@ RSpec.feature 'Event creation and management', type: :feature do
     visit new_event_path
 
     fill_in 'title',	with: 'My Event Title'
-    fill_in 'location',	with: 'My event location'
     fill_in 'date',	with: Date.new(2020, 10, 10)
     fill_in 'description',	with: 'My event description'
     click_on 'Submit'
