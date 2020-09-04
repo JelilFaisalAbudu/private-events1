@@ -4,8 +4,8 @@ class User < ApplicationRecord
     self.username = username.capitalize
   end
   has_many :created_events, foreign_key: :creator_id, class_name: 'Event'
-  has_many :attendances, foreign_key: :attendee_id
-  has_many :attended_events, through: :attendances, source: :organized_event
+  has_many :invitations, foreign_key: :attendee_id, class_name: 'Invitation', dependent: :destroy
+  has_many :attended_events, through: :invitations, source: :created_event
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   validates :username, presence: true

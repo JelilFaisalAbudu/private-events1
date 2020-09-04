@@ -3,16 +3,19 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show; end
+  def show
+    @user = User.find(params[:id])
+  end
 
   def create
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = 'You have successfully registered.'
-      redirect_to user_path(@user)
+      log_in(@user)
+      redirect_to root_path
     else
-      flash.now[:alert] = 'Error. Your registration was unsuccesful'
-      render 'new'
+      flash.now[:alert] = 'Sorry, you have error in your form. Check and try again'
+      render :new
     end
   end
 
