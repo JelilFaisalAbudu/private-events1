@@ -1,98 +1,52 @@
-<h3 align="center">Private Events</h3>
+# Private Events
 
-<h4 align="center">
-  🛸 Stay hungry, stay foolish
-</h4>
+> A mini web app for users to announce their events to the worlrd for others to register and attend.
 
-<div align="center">
-    
-[![languages](https://img.shields.io/github/languages/count/JelilFaisalAbudu/private-events1?style=plastic)](https://github.com/JelilFaisalAbudu/private-events1)
-[![Last commit](https://img.shields.io/github/last-commit/JelilFaisalAbudu/private-events1)](https://github.com/JelilFaisalAbudu/private-events1/commits/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![issues](https://img.shields.io/github/issues/JelilFaisalAbudu/private-events1)](https://github.com/JelilFAisalAbudu/private-events1/issues)
-[![Made By](https://img.shields.io/badge/Made%20By-Jelil%20Abudu-brightgreen)](https://github.com/JelilFaisalAbudu)
-[![Twitter Follow](https://img.shields.io/twitter/follow/jelilabudu?label=Follow%20Jelil%20on%20Twitter&style=social)](https://twitter.com/jelilabudu)
-</div>
+## Description
 
-<p align="center">
-<a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#installing">Installing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#built_using">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#author">Author</a>
-</p>
+In this assignment, students are expected to demonstrate high level skills on ActiveRecord Association. This in involves one-to-many, many-to-many and the ability to customize the association names to flow along with natural English Language.
 
-<p align="center">
-  <a href="" rel="noopener">
-  <img alt="Project Screenshot" src="app/assets/images/PrivateEvents1.png" width="100%">
-  </a>
-</p>
+## Built With
 
-## 🧐 About <a name = "about"></a>
-<h3 align="center">This is a Private Events project, which users can log in, create and attend to events. The goal here is to learn how associations works and how to implement many-to-many; belonging and so on. Hope you guys enjoy it.
+- Ruby
+- Ruby on Rails Framework
+- HTML
+- Bootstrap
 
-## ✨ Features
+## Installing
 
-☑ Login with email
+To run this app you must meet the following requirements.
 
-☑ Create events
+-Install Ruby version 2.7.0
+-Install Rails version 6.0.3.2
+-Clone the project to your local machine
+-Navigate into the project directory
+-Run `bundle install` to install the necessary gems
+-Run `rails db:migrate`
+-Run 'rails console' and start playing with the app
 
-☑ Attend to events
+## Authors
 
-☑ Tested with Rspec and Capybara
-
-☑ Valid HTML5 & CSS3
-
-## 👷‍♂️ ‍Installing <a name= "installing"></a>
-
-```bash
-Cloning:
-git clone https://github.com/kevincappuccino/private-events
-```
-
-Downloading:
-
-- unzip the downloaded file
-Get into the page using your favorite terminal and run the following commands:
-
-```bash
-bundle install
-rails db:migrate
-rails s
-```
-
-Then access in your favorite browser the indicated port number (By default rails uses: `localhost:3000`)
-
-## 🔧 Built with<a name = "built_using"></a>
-
-- [Ruby on Rails](https://rubyonrails.org/) - A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.
-- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - Front-end component library
-- [Sass](https://sass-lang.com/documentation) - CSS extension language
-- [Capybara](https://github.com/teamcapybara/capybara) - Acceptance test framework for web applications 
-- [Rspec](https://rspec.info/) - JBehaviour Driven Development for Ruby. Making TDD Productive and Fun.
-- [Bootsnipp](https://bootsnipp.com/) - Design elements, playground and code snippets for Bootstrap HTML/CSS/JS framework 
-- [PhotoShop CC](https://adobe.com/) - The most powerfull photo editor ever made;
-
-## ✒️  Autor <a name = "author"></a>
+![Hireable](https://img.shields.io/badge/HIREABLE-YES-yellowgreen&?style=for-the-badge)
 
 👤 **Jelil Faisal Abudu**
 
-- Github: [JelilFaisalAbudu](https://github.com/JelilFaisalAbudu/)
-- Twitter: [@jelilabudu](https://twitter.com/jelilabudu)
-- Linkedin: [jelilfaisalabudu](linkedin.com/in/jelilfaisalabudu)
+- Github: [@JelilFaisalAbudu](https://github.com/JelilFaisalAbudu)
+- Twitter: [@JelilAbudu](https://twitter.com/jelilabudu)
+- Linkedin: [jelilfaisalabudu](https://linkedin.com/in/jelilfaisalabudu)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
+Contributions, issues and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/JelilFaisalAbudu/private-events1/issues).
 
-## 👍 Show your support
+## Show your support
 
 Give a ⭐️ if you like this project!
 
-## 🏆 Acknowledgement
+## Acknowledgments
 
-- [Rails documentation](https://guides.rubyonrails.org/)
+- The Odin Project
 
 ## 📝 License
 
