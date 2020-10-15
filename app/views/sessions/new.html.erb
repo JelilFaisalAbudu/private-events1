@@ -1,0 +1,19 @@
+<div class="row justify-content-center align-items-center vh-100">
+	<div class="col-md-3">
+
+		<%= form_with(scope: :session, url: login_path, local: true, class: 'form-signin') do | f | %>
+			<h1 class="h3 mb-3 text-center">Please sign in</h1>
+			<div class="form-group">
+				<%= f.label :email,  class: 'sr-only' %>
+				<%= f.email_field :email, class: 'form_control', id: 'email', class: 'form-control', placeholder: 'user@example.com' %>
+			</div>
+
+			<div class="form-group">
+				<%= f.submit 'Sign In', class: "btn btn-lg btn-primary btn-block" %>
+			</div>
+
+		<% end %>
+		Or a new user? 
+		<%= link_to 'Sign Up', new_user_path, class: '' %>
+	</div>
+</div>
